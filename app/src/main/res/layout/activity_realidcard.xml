@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_e8"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/realidcard_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:hint="姓名"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/realidcard_idcard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:digits="1234567890xX"
+            android:hint="身份证号"
+            android:paddingLeft="20dp" />
+
+
+        <Button
+            android:id="@+id/realidcard_sumbit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_h"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_bg_style"
+            android:onClick="submit"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+</LinearLayout>

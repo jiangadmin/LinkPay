@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_e8"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/realidcardnext_cardid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:hint="银行卡号"
+            android:inputType="number"
+            android:paddingLeft="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="开户行总行"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner_bank"
+                style="@style/black_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="开户行省份"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner_province"
+                style="@style/black_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="开户行地市"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner_city"
+                style="@style/black_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="开户行支行"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner_xbank"
+                style="@style/black_14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/realidcardnext_workey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_et_h"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="请输入支行名称"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_e8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:onClick="WorKey"
+                android:text="搜索"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/realidcardnext_sumbit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_h"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_bg_style"
+            android:onClick="submit"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+</LinearLayout>

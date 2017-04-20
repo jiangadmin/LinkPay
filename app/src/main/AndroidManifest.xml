@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.linkpay">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--屏幕亮度权限-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--指纹-->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+
+    <permission
+        android:name="com.linkpay.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+    <!--这里com.xiaomi.mipushdemo改成app的包名-->
+    <uses-permission android:name="com.linkpay.permission.MIPUSH_RECEIVE" />
+    <!--这里com.xiaomi.mipushdemo改成app的包名-->
+
+    <application
+        android:name=".Application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeNoBackground">
+        <!--欢迎页-->
+        <activity
+
+            android:name=".Activity.Login.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--登录-->
+        <activity
+            android:name=".Activity.Login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <!--注册-->
+        <activity
+            android:name=".Activity.Login.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <!--手势密码登录-->
+        <activity
+            android:name=".Activity.Login.LoginLoucsActivity"
+            android:screenOrientation="portrait" />
+        <!--忘记密码-->
+        <activity
+            android:name=".Activity.Login.ForgetPwdActivity"
+            android:screenOrientation="portrait" />
+        <!--主页-->
+        <activity
+            android:name=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <!--我的台码-->
+        <activity
+            android:name=".Activity.Home.MyQRCodeActivity"
+            android:screenOrientation="portrait" />
+        <!--通知中心-->
+        <activity
+            android:name=".Activity.Home.NoticeActivity"
+            android:screenOrientation="portrait" />
+        <!--分享-->
+        <activity
+            android:name=".Activity.Home.ShareActivity"
+            android:screenOrientation="portrait" />
+        <!--信用卡列表-->
+        <activity
+            android:name=".Activity.Home.MyCardListActivity"
+            android:screenOrientation="portrait" />
+        <!--添加卡-->
+        <activity
+            android:name=".Activity.Home.AddCardActivity"
+            android:screenOrientation="portrait" />
+        <!--交易-->
+        <activity
+            android:name=".Activity.Home.CardPayActivty"
+            android:screenOrientation="portrait" />
+        <!--实名认证 一 -->
+        <activity
+            android:name=".Activity.Mine.RealIdCardActivity"
+            android:screenOrientation="portrait" />
+        <!--实名认证 三 -->
+        <activity
+            android:name=".Activity.Mine.RealCardIDActivity"
+            android:screenOrientation="portrait" />
+        <!--实名认证 三 -->
+        <activity
+            android:name=".Activity.Mine.StoreActivity"
+            android:screenOrientation="portrait" />
+        <!--结算卡信息-->
+        <activity
+            android:name=".Activity.Mine.CardIdInfoActivity"
+            android:screenOrientation="portrait" />
+        <!--更多-->
+        <activity
+            android:name=".Activity.Mine.MoreActivity"
+            android:screenOrientation="portrait" />
+        <!--客服-->
+        <activity
+            android:name=".Activity.Mine.More.HumanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Mine.More.KeFuActivity"
+            android:screenOrientation="portrait" />
+        <!--账单-->
+        <activity
+            android:name=".Activity.Home.BillActivity"
+            android:screenOrientation="portrait" />
+        <!--拍照-->
+        <activity
+            android:name=".Activity.Mine.SetPhotoActivity"
+            android:screenOrientation="portrait" />
+        <!--密码-->
+        <activity
+            android:name=".Activity.Mine.More.PasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--关于-->
+        <activity
+            android:name=".Activity.Mine.More.AboutActivity"
+            android:screenOrientation="portrait" />
+        <!--手势密码设置-->
+        <activity
+            android:name=".Activity.Mine.More.LocusPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 更新弹出框-->
+        <activity
+            android:name=".Dialog.UpdateWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" />
+        <!--接收微信的请求及返回值-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105709765" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".push.PushActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Dialog.PushDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyPushTheme" >
+            <intent-filter>
+                <action android:name="com.linkpay.pushh"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+        <!--注：此service必须在3.0.1版本以后（包括3.0.1版本）加入-->
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <!--将自定义的BroadcastReceiver注册到AndroidManifest.xml文件中-->
+        <receiver
+            android:name=".push.MessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <!--注：此service必须在2.2.5版本以后（包括2.2.5版本）加入-->
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

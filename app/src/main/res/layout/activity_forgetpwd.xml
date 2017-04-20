@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_ayout"
+    android:layout_width="match_parent"
+    android:background="@color/gray_e8"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_bar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/forgetpwd_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:background="@color/white"
+            android:hint="@string/forgetpwd_phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/et_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent" />
+
+        <EditText
+            android:id="@+id/forgetpwd_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:background="@color/white"
+            android:hint="@string/forgetpwd_pwd_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/et_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent" />
+
+        <EditText
+            android:id="@+id/forgetpwd_repwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:background="@color/white"
+            android:hint="@string/forgetpwd_repwd_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/et_text_size" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:orientation="horizontal">
+
+            <EditText
+                android:background="@color/transparent"
+                android:id="@+id/forgetpwd_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_et_h"
+                android:layout_weight="3"
+                android:hint="@string/forgetpwd_code_hint"
+                android:inputType="number"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/et_text_size" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_e8" />
+
+            <TextView
+                android:onClick="GetSMSCode"
+                android:id="@+id/forgetpwd_code_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/forgetpwd_code_btn"
+                android:textColor="@color/black"
+                android:textSize="@dimen/et_text_size" />
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_marginTop="40dp"
+            android:onClick="ForGetPWD"
+            android:id="@+id/forgetpwd_sumbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/yuanjiao_style"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

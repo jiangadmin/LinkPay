@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/addcard_cardnum"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:background="@drawable/btn_wg"
+            android:hint="@string/addcard_cardnum"
+            android:inputType="number"
+            android:maxLength="21"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/et_text_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/addcard_expdate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_et_h"
+                android:layout_weight="10"
+                android:background="@drawable/btn_wg"
+                android:hint="@string/addcard_expdate"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/et_text_size" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent" />
+
+            <EditText
+                android:id="@+id/addcard_cvn2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_et_h"
+                android:layout_weight="7"
+                android:background="@drawable/btn_wg"
+                android:hint="@string/addcard_cvn2"
+                android:inputType="number"
+                android:maxLength="3"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/et_text_size" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transparent" />
+
+        <EditText
+            android:id="@+id/addcard_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:background="@drawable/btn_wg"
+            android:hint="@string/addcard_phone"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/et_text_size" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="(限额：单卡单笔 2 万，单日 5 万)"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/register_et_h"
+                android:background="@drawable/btn_wg"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/addcard_money"
+                android:textColor="@color/black"
+                android:textSize="@dimen/et_text_size" />
+
+            <EditText
+                android:id="@+id/addcard_money"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_et_h"
+                android:background="@drawable/btn_wg"
+                android:inputType="numberDecimal"
+                android:maxLength="8"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/et_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/addcard_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/btn_wg"
+                android:hint="短信验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/et_text_size" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent" />
+
+            <TextView
+                android:id="@+id/addcard_smscode_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@drawable/btn_wg"
+                android:gravity="center"
+                android:onClick="发起绑定"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="获取验证码"
+                android:textColor="@color/black"
+                android:textSize="@dimen/et_text_size" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/addcard_sumbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/yuanjiao_style"
+            android:onClick="确认绑定"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

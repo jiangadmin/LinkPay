@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mycard_bg"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/cardinfo_bg">
+
+        <ImageView
+            android:id="@+id/mycard_banklogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/head_bg" />
+
+        <TextView
+            android:id="@+id/mycard_bankname"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/mycard_banklogo"
+            android:gravity="center"
+            android:text="中国建设银行"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/cardidinfo_cardid_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="70dp"
+            android:gravity="center"
+            android:text="**** **** **** "
+            android:textColor="@color/gray_e8"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/mycard_cardnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:layout_toRightOf="@+id/cardidinfo_cardid_hint"
+            android:text="1244"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/mycard_cardtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:text="快捷支付"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/mycard_cardname"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="贷记卡"
+            android:textColor="@color/white"
+            android:layout_below="@+id/mycard_cardtype"
+            android:layout_alignStart="@+id/mycard_bankname" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

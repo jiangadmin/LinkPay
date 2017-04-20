@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_e8"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <!--账户安全-->
+        <LinearLayout
+            android:onClick="Password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:background="@drawable/btn_wg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/more_password"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/et_h"
+                android:layout_height="@dimen/et_h"
+                android:src="@drawable/ic_menu_in" />
+        </LinearLayout>
+        <!--手势密码-->
+        <LinearLayout
+            android:onClick="Loucs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_wg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/more_loucs"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/et_h"
+                android:layout_height="@dimen/et_h"
+                android:src="@drawable/ic_menu_in" />
+        </LinearLayout>
+        <!--检查更新-->
+        <LinearLayout
+            android:onClick="Update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_wg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/more_update"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/et_h"
+                android:layout_height="@dimen/et_h"
+                android:src="@drawable/ic_menu_in" />
+        </LinearLayout>
+        <!--联系客服-->
+        <LinearLayout
+            android:onClick="Human"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/btn_wg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/more_human"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/et_h"
+                android:layout_height="@dimen/et_h"
+                android:src="@drawable/ic_menu_in" />
+        </LinearLayout>
+        <!--关于-->
+        <LinearLayout
+            android:onClick="About"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_et_h"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_wg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/more_about"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/et_h"
+                android:layout_height="@dimen/et_h"
+                android:src="@drawable/ic_menu_in" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

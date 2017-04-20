@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        Linkpay {
+            keyAlias 'lingpay'
+            keyPassword 'jiangadmin'
+            storeFile file('/Users/jiang/Desktop/KEY/LINKPAY.jks')
+            storePassword 'jiangadmin'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.linkpay"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionName "0.8.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionCode 1
+    }
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            buildConfigField('boolean', 'LOG_DEBUG', 'true')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.Linkpay
+        }
+        debug{
+            debuggable true
+
+        }
+    }
+    productFlavors {
+        领贝钱包 {
+            minSdkVersion 19
+            applicationId 'com.linkpay'
+            signingConfig signingConfigs.Linkpay
+            targetSdkVersion 22
+            versionCode 3
+            versionName '1.0.7'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.2'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile files('libs/libammsdk.jar')
+    compile files('libs/open_sdk_r5756_lite.jar')
+    compile files('libs/MiPush_SDK_Client_3_2_1.jar')
+    androidTestCompile 'org.testng:testng:6.9.6'
+    compile project(path: ':libzxing')
+}
